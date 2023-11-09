@@ -4,6 +4,7 @@ use App\Http\Controllers\CapteurController;
 use App\Http\Controllers\MaisonController;
 use App\Http\Controllers\MonitoringController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
