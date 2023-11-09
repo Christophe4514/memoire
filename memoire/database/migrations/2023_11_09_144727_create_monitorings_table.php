@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("humidite")->nullable();
             $table->string("pir")->nullable();
             $table->string("fume")->nullable();
-            $table->integer("maison_id", false, true);
+            $table->integer("maison_id", false, true)->nullable();
             $table->timestamps();
         });
     }

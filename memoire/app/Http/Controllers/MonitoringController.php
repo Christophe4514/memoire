@@ -9,11 +9,19 @@ use Illuminate\Http\Request;
 class MonitoringController extends Controller
 {
     public function index(){
+        // $details = Monitoring::latest()->first();
+
         $details = Monitoring::all();
 
         return view('monitoring.index', compact('details'));
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 
     public function store(Request $request, $id){
         $maison = Maison::find($id);

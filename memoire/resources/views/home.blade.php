@@ -36,7 +36,7 @@
             <br>
             <div class="row justify-content-center">
                 @foreach ($maisons as $maison)
-                    <div class="col-6">
+                    <div class="col-8">
                         <div class="card bg-success">
                             <div class="card-header">
                                 <h2 class="text-center">{{ $maison->maison }}</h2>
@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <a href="{{ url('/detail/'. $maison->id) }}" class="btn btn-primary">Détails</a>
+                                    <a href="{{ url('/detail/'. $maison->id) }}" class="btn btn-primary">Données </a>
                                 </div>
                             </div>
                             <div class="card-footer">
