@@ -27,6 +27,9 @@ Route::get('/eteindre_lampe/{id}', [MaisonController::class, 'eteindre_lampe']);
 Route::get('/allumer_ventillateur/{id}', [MaisonController::class, 'allumer_ventillateur']);
 Route::get('/eteindre_ventillateur/{id}', [MaisonController::class, 'eteindre_ventillateur']);
 Route::get('/detail/{id}', [MonitoringController::class, 'index']);
+Route::get('/supprimer/{id}',[MaisonController::class, 'supprimer']);
+Route::get('/modifier/{id}',[MaisonController::class, 'edit']);
+Route::post('/update/{id}',[MaisonController::class, 'update']);
 
 Auth::routes();
 

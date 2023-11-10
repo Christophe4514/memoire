@@ -14,7 +14,8 @@ class Monitoring extends Model
         'temperature',
         'humidite',
         'pir',
-        'fume'
+        'fume',
+        'maison_id',
     ];
 
     public function maison(){

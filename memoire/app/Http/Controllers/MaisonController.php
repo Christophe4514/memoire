@@ -42,4 +42,26 @@ class MaisonController extends Controller
         $maisons->save();
         return back();
     }
+
+    public function supprimer($id){
+        $maison = Maison::find($id);
+
+        $maison->delete();
+
+        return back();
+    }
+
+    public function edit($id){
+        $maison = Maison::find($id);
+
+        return view('maison.edit', compact('maison'));
+    }
+
+    public function update(Request $request, $id){
+        $maison = Maison::find($id);
+
+        $maison->maison = $request->input('maison');
+        $maison->update();
+        return redirect(url('/home'))->with('status', 'maison modifier avec sucess');
+    }
 }
