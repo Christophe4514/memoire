@@ -34,7 +34,7 @@
                     <th scope="col">Luminosité</th>
                     <th scope="col">Temperature</th>
                     <th scope="col">Humidité</th>
-                    <th scope="col">Pir</th>
+                    <th scope="col">Détection présence</th>
                     <th scope="col">Qualité de l'air</th>
                     <th scope="col">Date</th>
                   </tr>
