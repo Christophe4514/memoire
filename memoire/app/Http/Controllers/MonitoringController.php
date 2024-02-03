@@ -11,7 +11,7 @@ class MonitoringController extends Controller
     public function index(){
         // $details = Monitoring::latest()->first();
 
-        $details = Monitoring::all();
+        $details = Monitoring::orderBy('id', 'DESC')->get();
 
         return view('monitoring.index', compact('details'));
     }

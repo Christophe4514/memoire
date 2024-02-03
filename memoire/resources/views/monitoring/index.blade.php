@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header text-center">{{ __('Monitoring') }}</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -35,7 +35,7 @@
                     <th scope="col">Temperature</th>
                     <th scope="col">Humidité</th>
                     <th scope="col">Pir</th>
-                    <th scope="col">Fumée</th>
+                    <th scope="col">Qualité de l'air</th>
                     <th scope="col">Date</th>
                   </tr>
                 </thead>
@@ -43,11 +43,11 @@
                     @foreach ($details as $key=> $detail)
                     <tr>
                         <th scope="row">{{$key + 1}}</th>
-                        <td>{{$detail->luminosite}}</td>
-                        <td>{{$detail->temperature}}</td>
-                        <td>{{$detail->humidite}}</td>
+                        <td>{{$detail->luminosite}} %</td>
+                        <td>{{$detail->temperature}} °C</td>
+                        <td>{{$detail->humidite}} %</td>
                         <td>{{$detail->pir}}</td>
-                        <td>{{$detail->fume}}</td>
+                        <td>{{$detail->fume}} ppm: bonne</td>
                         <td>{{$detail->created_at}}</td>
                       </tr>
                     @endforeach

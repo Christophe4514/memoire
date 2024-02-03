@@ -5,16 +5,16 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header text-center">{{ __('Dashboard') }}</div>
+                    {{-- <div class="card-header text-center">{{ __('Dashboard') }}</div> --}}
 
-                    <div class="card-body">
+                    <div class="card-body display-6 text-center">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
                             </div>
                         @endif
 
-                        {{ __("Projet de fin d'étude") }}
+                        {{ __("Maison SM") }}
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <br>
             <div class="row justify-content-center">
                 @foreach ($maisons as $maison)
-                    <div class="col-6 my-2">
+                    <div class="col-10 my-2">
                         <div class="card bg-success">
                             <div class="card-header">
                                 <h2 class="text-center">{{ $maison->maison }}</h2>
@@ -64,13 +64,18 @@
                                                 <a href="{{ url('/eteindre_ventillateur/'. $maison->id) }}" class="btn btn-danger">Eteindre ventillateur</a>
                                             @endif
                                         </div>
-                                        <div class="col-3 my-2">
+                                        <div class="clo-12">
+                                            <P>
+                                                <hr>
+                                            </P>
+                                        </div>
+                                        <div class="col-4 my-2">
                                             <a href="{{ url('/detail/'. $maison->id) }}" class="btn btn-primary">Données </a>
                                         </div>
                                         <div class="col-4 my-2">
                                             <a href="{{ url('/supprimer/'. $maison->id) }}" class="btn btn-danger">Supprimer </a>
                                         </div>
-                                        <div class="col-4 my-2">
+                                        <div class="col-4 my-é">
                                             <a href="{{ url('/modifier/'. $maison->id) }}" class="btn btn-dark">Modifier </a>
                                         </div>
                                     </div>
