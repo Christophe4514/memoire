@@ -10,6 +10,12 @@ class MaisonApiController extends Controller
     public function index(){
         $maison = Maison::all();
 
-        return response()->json($maison);
+        // dd($maison);
+        return response([
+            'maison' => $maison[0]->maison,
+            'ventillateur' => $maison[0]->ventillateur,
+            'lampe' => $maison[0]->lampe
+        ], 200);
+        //  return response()->json($maison);
     }
 }
